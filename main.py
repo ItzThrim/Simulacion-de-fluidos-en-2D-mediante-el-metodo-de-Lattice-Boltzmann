@@ -1,3 +1,9 @@
+import sys
+import os
+
+sys.path.append(os.path.abspath("src"))
+sys.path.append(os.path.abspath("initpy"))
+
 import numpy as np
 from Valores_iniciales import inicializar_red
 from Construccion_algoritmo import actualizar_equilibrio_global, colisionar, propagar, recalcular_macros
