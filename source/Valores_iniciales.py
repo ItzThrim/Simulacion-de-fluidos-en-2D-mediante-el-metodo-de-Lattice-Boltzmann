@@ -1,5 +1,4 @@
 import numpy as np
-<<<<<<< HEAD
 import matplotlib.pyplot as plt
 import random
 import imageio #para crear GIFS
