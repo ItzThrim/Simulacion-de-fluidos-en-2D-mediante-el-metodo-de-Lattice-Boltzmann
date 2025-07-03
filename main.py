@@ -1,7 +1,7 @@
 import sys
 import os
 
-sys.path.append(os.path.abspath("src"))
+sys.path.append(os.path.abspath("source"))
 sys.path.append(os.path.abspath("initpy"))
 
 import numpy as np
