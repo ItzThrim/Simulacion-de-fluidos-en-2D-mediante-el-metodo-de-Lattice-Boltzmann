@@ -1,25 +1,47 @@
 import sys
 import os
+import imageio
+sys.path.append(os.path.join(os.path.dirname(__file__), 'source'))
 
-sys.path.append(os.path.abspath("source"))
-sys.path.append(os.path.abspath("initpy"))
+import os
+import imageio
+from source.Valores_iniciales import inicializar, crear_triangulo, condiciones_frontera
+from source.Construccion_algoritmo import colision, propagacion, rebote
+from source.Resultados import guardar_imagen
+from source.config import Nx, Ny
 
-import numpy as np
-from Valores_iniciales import inicializar_red
-from Construccion_algoritmo import actualizar_equilibrio_global, colisionar, propagar, recalcular_macros
+def main():
+    os.makedirs("imagenes_lbm", exist_ok=True)
+    imagenes = []
+    # Parámetros
+    pasos = 1000
+    guardar_cada = 10
+    fps_gif = 15
+    
+    # Inicialización
+    Obs = crear_triangulo()
+    f, rho, vx, vy, Obs = inicializar(Obs)
+    imagenes = []
+    
+    try:
+        for t in range(pasos):
+            f, rho, vx, vy = colision(f, rho, vx, vy, Obs)
+            f = propagacion(f)
+            f = rebote(f, Obs)
+            f = condiciones_frontera(f, vx, vy, rho)
+            
+            if t % guardar_cada == 0:
+                guardar_imagen(t, vx, vy, Obs, imagenes)
+                print(f"Progreso: {t}/{pasos}")
+        
+        # Crear GIF
+        imageio.mimsave("simulacion.gif", imagenes, fps=fps_gif)
+    
+    finally:
+        # Limpieza
+        for file in os.listdir("imagenes_lbm"):
+            os.remove(f"imagenes_lbm/{file}")
+        os.rmdir("imagenes_lbm")
 
-Nx, Ny = 3, 3
-mat_vel, mat_den, f = inicializar_red(Nx, Ny)
-
-f = actualizar_equilibrio_global(f, mat_den, mat_vel)
-
-fcol = colisionar(f, w=2)
-
-fprop = propagar(fcol)
-
-mat_den, mat_vel = recalcular_macros(fprop)
-
-f = actualizar_equilibrio_global(f, mat_den, mat_vel)
-
-print("Densidad en (0,0):", mat_den[0, 0])
-print("Velocidad en (0,0):", mat_vel[0, 0])
+if __name__ == "__main__":
+    main()
