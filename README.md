@@ -47,7 +47,7 @@ paso_de_tiempo # Total de pasos temporales
 guardar_cada   # Intervalo de guardado de imágenes
 
 
-##Resultados
+## Resultados
 
 ![Simulación de Flujo](ejemplo_circulo_lbm.gif)
 
