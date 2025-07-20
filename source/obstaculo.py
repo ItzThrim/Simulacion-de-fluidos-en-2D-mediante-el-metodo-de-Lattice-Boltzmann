@@ -15,3 +15,11 @@ def crear_obstaculo_triangulo(x1, y1, x2, y2, x3, y3):
             if 0 <= a <= 1 and 0 <= b <= 1 and 0 <= c <= 1:
                 Obs[i, j] = True
     return Obs
+
+def crear_obstaculo_circulo(xc, yc, radio):
+    Obs = np.zeros((Nx, Ny), dtype=bool)
+    for i in range(Nx):
+        for j in range(Ny):
+            if (i - xc)**2 + (j - yc)**2 <= radio**2:
+                Obs[i, j] = True
+    return Obs

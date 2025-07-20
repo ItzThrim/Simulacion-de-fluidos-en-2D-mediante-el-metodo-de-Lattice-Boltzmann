@@ -1,13 +1,13 @@
 import numpy as np
 import os
 
-Nx = 60
-Ny = 30
+Nx = 120
+Ny = 60
 u0 = 0.1
 viscosidad = 0.5
 tau = 3 * viscosidad + 0.5
 w = 1 / tau
-paso_de_tiempo = 25
+paso_de_tiempo = 300
 guardar_cada = 5
 
 M = np.array([
