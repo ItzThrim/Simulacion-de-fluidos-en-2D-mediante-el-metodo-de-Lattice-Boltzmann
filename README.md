@@ -49,5 +49,10 @@ guardar_cada   # Intervalo de guardado de imágenes
 
 ## Resultados
 
+# Ejemplo de un circulo
+
 ![Simulación de Flujo](ejemplo_circulo_lbm.gif)
 
+# Aeorodinamica de una vaca
+
+![Simulación de Flujo](ejemplo_vaca_lbm.gif)
