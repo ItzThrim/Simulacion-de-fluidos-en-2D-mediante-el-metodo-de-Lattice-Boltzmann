@@ -32,7 +32,7 @@ Este proyecto implementa una simulación bidimensional de flujo de fluidos utili
 pip install numpy matplotlib imageio
 ```
 
-3. Ejecutar el archivo main>
+3. Ejecutar el archivo main
 
 ```bash
 python3 main.py
