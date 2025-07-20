@@ -27,11 +27,16 @@ Este proyecto implementa una simulación bidimensional de flujo de fluidos utili
 1. **Clona o descarga** este repositorio.
 
 2. Asegúrate de tener Python 3 instalado, junto con los siguientes paquetes:
-3. 
+
 ```bash
 pip install numpy matplotlib imageio
 ```
 
+3. Ejecutar el archivo main>
+
+```bash
+python3 main.py
+```
 # Parametros
 
 Nx             # Número de nodos en x
@@ -45,7 +50,6 @@ viscosidad     # Viscosidad cinemática
 paso_de_tiempo # Total de pasos temporales
 
 guardar_cada   # Intervalo de guardado de imágenes
-
 
 ## Resultados
 
