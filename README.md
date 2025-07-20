@@ -6,14 +6,14 @@ Este proyecto implementa una simulación bidimensional de flujo de fluidos utili
 
 ## Estructura del Proyecto
 
-├── algoritmo.py # Funciones principales del LBM (colisión, propagación, etc.)
-├── gif.py # Función para crear un GIF a partir de imágenes
-├── guardarimg.py # Guarda imágenes de cada frame de la simulación
-├── main.py # Script principal de simulación
-├── obstaculo.py # Generador de obstáculos (e.g., triángulo)
-├── parametros.py # Parámetros de simulación
-├── imagenes_lbm/ # Carpeta donde se guardan las imágenes generadas
-├── README.md # Este archivo
+-├── algoritmo.py # Funciones principales del LBM (colisión, propagación, etc.)
+-├── gif.py # Función para crear un GIF a partir de imágenes
+-├── guardarimg.py # Guarda imágenes de cada frame de la simulación
+-├── main.py # Script principal de simulación
+-├── obstaculo.py # Generador de obstáculos (e.g., triángulo)
+-├── parametros.py # Parámetros de simulación
+-├── imagenes_lbm/ # Carpeta donde se guardan las imágenes generadas
+-├── README.md # Este archivo
 
 ## Cómo Ejecutar
 
@@ -27,12 +27,12 @@ pip install numpy matplotlib imageio
 
 # Parametros
 
-Nx             # Número de nodos en x
-Ny             # Número de nodos en y
-u0             # Velocidad inicial
-viscosidad     # Viscosidad cinemática
-paso_de_tiempo # Total de pasos temporales
-guardar_cada   # Intervalo de guardado de imágenes
+-Nx             # Número de nodos en x
+-Ny             # Número de nodos en y
+-u0             # Velocidad inicial
+-viscosidad     # Viscosidad cinemática
+-paso_de_tiempo # Total de pasos temporales
+-guardar_cada   # Intervalo de guardado de imágenes
 
 
 ##Resultados
