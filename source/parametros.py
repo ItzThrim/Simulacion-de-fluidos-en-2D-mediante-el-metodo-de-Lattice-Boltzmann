@@ -7,7 +7,7 @@ u0 = 0.1
 viscosidad = 0.5
 tau = 3 * viscosidad + 0.5
 w = 1 / tau
-paso_de_tiempo = 250
+paso_de_tiempo = 25
 guardar_cada = 5
 
 M = np.array([

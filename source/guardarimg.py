@@ -16,11 +16,3 @@ def guardar(ux, uy, obj, t, imagenes, carpeta):
     imagenes.append(imageio.imread(nombre))
     print(f"Paso {t} guardado")
 
-def crear_gif(nombre_salida, imagenes):
-    try:
-        with imageio.get_writer(nombre_salida, mode='I', duration=0.1) as writer:
-            for imagen in imagenes:
-                writer.append_data(imageio.imread(imagen))
-        print(f"GIF guardado correctamente como '{nombre_salida}'")
-    except Exception as e:
-        print(f"Error al crear el GIF: {e}")

@@ -1,11 +1,13 @@
 import numpy as np
 import sys
 import os
+import imageio
 sys.path.append(os.path.join(os.path.dirname(__file__), 'source'))
 from source.parametros import *
 from source.algoritmo import *
 from source.obstaculo import crear_obstaculo_triangulo
-from source.guardargif import guardar, crear_gif
+from source.guardarimg import guardar
+from gif import crear_gif
 
 script_dir = os.path.dirname(os.path.abspath(__file__))
 ruta_imagenes = os.path.join(script_dir, "imagenes_lbm")
@@ -35,4 +37,5 @@ for t in range(paso_de_tiempo):
 
     if t % guardar_cada == 0:
         guardar(vx, vy, Obs, t,imagenes,ruta_imagenes)
-crear_gif("flujo_triangulo.gif", imagenes)
+
+crear_gif(ruta_imagenes, "simulacion_lbm.gif")
