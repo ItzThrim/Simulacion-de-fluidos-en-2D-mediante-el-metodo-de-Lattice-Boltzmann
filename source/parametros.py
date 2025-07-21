@@ -3,8 +3,8 @@ import os
 
 # Aca definimos los parametros del modelo, mantenga discresion con los valores
 
-Nx = 20
-Ny = 10
+Nx = 270
+Ny = 140
 u0 = 0.1
 viscosidad = 0.5
 tau = 3 * viscosidad + 0.5
