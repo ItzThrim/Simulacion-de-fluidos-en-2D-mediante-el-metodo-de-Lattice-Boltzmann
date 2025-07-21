@@ -2,9 +2,14 @@ import numpy as np
 from parametros import Nx, Ny
 
 #Aca creamos el objeto, yo deje el triangulo 
-
+# Es muy importante siempre definir una figura en el codigo principal, varias funciones dependen de ese 
+# parametro
 
 def crear_obstaculo_triangulo(x1, y1, x2, y2, x3, y3):
+    """
+    Un triangulo , cambie los valores de x1, x2, x3, y1, y2, y3 para definir las esquinas, cuidado de 
+    no superar el rango de Nx y Ny
+    """
     Obs = np.zeros((Nx, Ny), dtype=bool)
     for i in range(Nx):
         for j in range(Ny):
@@ -17,6 +22,10 @@ def crear_obstaculo_triangulo(x1, y1, x2, y2, x3, y3):
     return Obs
 
 def crear_obstaculo_circulo(xc, yc, radio):
+    """
+    Un circulo , cambie los valores de xc, yc y radio para definir el centro y el radio del circulo
+    , cuidado de no superar el rango de Nx y Ny
+    """
     Obs = np.zeros((Nx, Ny), dtype=bool)
     for i in range(Nx):
         for j in range(Ny):
@@ -25,6 +34,10 @@ def crear_obstaculo_circulo(xc, yc, radio):
     return Obs
 
 def crear_obstaculo_rectangulo(x1, y1, x2, y2):
+    """
+    Un rectangulo , cambie los valores de x1, x2, y1, y2 para definir las esquinas, cuidado de
+    no superar el rango de Nx y Ny
+    """
     Obs = np.zeros((Nx, Ny), dtype=bool)
     for i in range(Nx):
         for j in range(Ny):
@@ -33,6 +46,9 @@ def crear_obstaculo_rectangulo(x1, y1, x2, y2):
     return Obs
 
 def crear_obstaculo_vaca(x, y):
+    """
+    Aeroidinamica de una vaca(mas o menos), defina el tamaño de la vaca con lo parametros x y
+    """
     Obs = np.zeros((Nx, Ny), dtype=bool)
 
     # Centro de la figura
@@ -65,5 +81,8 @@ def crear_obstaculo_vaca(x, y):
 
     return Obs
 def crear_obstaculo_vacio(x, y):
+    """
+    Definimos el espacio sin obstaculo
+    """
     Obs = np.zeros((x, y), dtype=bool)
     return Obs
