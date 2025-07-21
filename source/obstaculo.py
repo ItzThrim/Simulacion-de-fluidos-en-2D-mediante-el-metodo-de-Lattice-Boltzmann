@@ -64,3 +64,6 @@ def crear_obstaculo_vaca(x, y):
                     Obs[i, j] = True
 
     return Obs
+def crear_obstaculo_vacio(x, y):
+    Obs = np.zeros((x, y), dtype=bool)
+    return Obs
