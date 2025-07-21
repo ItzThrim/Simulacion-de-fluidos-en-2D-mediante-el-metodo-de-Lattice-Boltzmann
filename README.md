@@ -55,8 +55,8 @@ guardar_cada   # Intervalo de guardado de imágenes
 
 # Ejemplo de un circulo
 
-![Simulación de Flujo](ejemplo_circulo_lbm.gif)
+![Simulación de Flujo](ejemplo_circulo_lbm.gif) ![Simulación de Flujo](ejemplo_circulo_lbm_densidad.gif)
 
 # Aeorodinamica de una vaca
 
-![Simulación de Flujo](ejemplo_vaca_lbm.gif)
+![Simulación de Flujo](ejemplo_vaca_lbm.gif) ![Simulación de Flujo](ejemplo_vaca_lbm_densidad.gif)
