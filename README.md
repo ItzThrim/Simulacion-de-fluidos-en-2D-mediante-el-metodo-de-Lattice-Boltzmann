@@ -31,8 +31,9 @@ Este proyecto implementa una simulación bidimensional de flujo de fluidos utili
 ```bash
 pip install numpy matplotlib imageio
 ```
+3. Modificar los parámetros en source/parametros.py y en el archivo main.py seleccionar la figura con sus dimensiones deseadas.
 
-3. Ejecutar el archivo main
+4. Ejecutar el archivo main.
 
 ```bash
 python3 main.py
